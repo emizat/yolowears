@@ -1,0 +1,114 @@
+// GALLERY HEADER
+.gallery__header {
+  height: 9.6rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem;
+
+  display: flex;
+  align-items: center;
+
+  &--logo-box {
+    height: 80%;
+    display: flex;
+    align-items: center;
+
+    .gallery__logo {
+      height: 6rem;
+      width: auto;
+    }
+  }
+
+  .home {
+    &__link {
+      &:link,
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+      }
+    }
+
+    &__icon {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+// GALLERY
+
+.gallery {
+  padding: 6.4rem 3.2rem 4.4rem;
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 4.4rem 2.4rem 3.2rem;
+  }
+
+  &__container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2.4rem;
+
+    @media only screen and (max-width: 42.25em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery__img-card {
+      background-color: var(--color-secondary);
+      padding: 2.4rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem var(--color-secondary);
+
+      display: flex;
+      align-items: center;
+
+      @media only screen and (max-width: 42.25em) {
+        padding: 1rem;
+      }
+    }
+
+    .gallery__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.btn__fixed {
+  display: none;
+  width: fit-content;
+  text-align: center;
+  padding: 1.6rem;
+  background-color: var(--color-secondary);
+  position: fixed;
+  bottom: 4.8rem;
+  right: 2.4rem;
+  border-radius: 2rem 1.6rem;
+  box-shadow: 0 0.8rem 0.5rem rgba(0, 0, 0, 0.5);
+  z-index: 8888;
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 1rem;
+    border-radius: 1rem 0.8rem;
+  }
+
+  &-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--color-primary);
+      font-size: 3.2rem;
+      font-weight: bold;
+
+      @media only screen and (max-width: 37.5em) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

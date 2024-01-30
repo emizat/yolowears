@@ -1,0 +1,328 @@
+main {
+  padding: 2.4rem;
+
+  @media only screen and (max-width: 68.75em) {
+    padding: 6.4rem 0 0;
+  }
+}
+
+.about__heading {
+  font-family: "Noto Serif", serif;
+  font-size: 5.2rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  animation: moveInLeft 1s ease-out;
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 3.4rem;
+  }
+}
+
+.heading__secondary-about {
+  font-size: 3.2rem;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+// ABOUT SECTION
+
+.section--about {
+  max-width: 100%;
+  padding: 0 0 9.6rem;
+  background-color: #fbf6f0;
+
+  @media only screen and (max-width: 68.75em) {
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .about {
+    padding: 6.4rem 3.2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    column-gap: 6.4rem;
+    justify-items: center;
+
+    @media only screen and (max-width: 68.75em) {
+      grid-template-columns: 1fr;
+      row-gap: 4.4rem;
+      padding: 4.4rem;
+    }
+
+    &__text-box {
+      @media only screen and (max-width: 68.75em) {
+        padding: 0 4rem;
+        text-align: center;
+      }
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      letter-spacing: 0.75px;
+      animation: moveInRight 1s ease-out;
+
+      &-1::first-letter {
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-family: "Noto Serif", serif;
+      }
+    }
+
+    &__img-box {
+      width: 100%;
+      position: relative;
+      animation: moveInRight 1s ease-out;
+
+      @media only screen and (max-width: 68.75em) {
+        padding: 2rem;
+      }
+
+      .about__img-fig {
+        width: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 25%;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        @media only screen and (max-width: 68.75em) {
+          width: 32.33%;
+          position: relative;
+          top: 0;
+          left: 0;
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+        }
+
+        &-1 {
+          z-index: 2;
+          @media only screen and (max-width: 68.75em) {
+            transform: scale(1.1);
+          }
+        }
+        &-2 {
+          top: 30%;
+          left: 45%;
+          z-index: 3;
+
+          @media only screen and (max-width: 68.75em) {
+            top: 0;
+            left: 30%;
+            transform: scale(1.1);
+          }
+        }
+        &-3 {
+          top: 35%;
+          left: 5%;
+
+          @media only screen and (max-width: 68.75em) {
+            top: 0;
+            left: -33%;
+            transform: scale(1.2);
+            z-index: 3333;
+          }
+        }
+
+        .about__img {
+          display: block;
+          width: 100%;
+          /* height: 25rem; */
+          transition: all 0.3s;
+        }
+      }
+    }
+
+    .about__img-fig:hover img {
+      outline: 0.8rem solid var(--color-primary);
+      outline-offset: 2rem;
+    }
+
+    .about__img-box:hover .about__img-fig:not(:hover) {
+      transform: scale(0.8);
+    }
+
+    .about__img-box:hover .about__img-fig:hover {
+      transform: translateY(-2rem) scale(1.3);
+      z-index: 888;
+    }
+  }
+}
+
+// FEATURES SECTION
+
+.section--features {
+  padding: 9.6rem 0;
+
+  @media only screen and (max-width: 68.75em) {
+    padding: 6.4rem 3.2rem;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 6.4rem;
+    align-items: center;
+
+    @media only screen and (max-width: 68.75em) {
+      grid-template-columns: 1fr;
+    }
+
+    .feature {
+      padding: 2rem;
+      text-align: center;
+
+      @media only screen and (max-width: 68.75em) {
+        background-color: var(--color-tertiary-light);
+        padding: 2.4rem;
+      }
+
+      &:not(:last-child) {
+        @media only screen and (max-width: 68.75em) {
+          margin-bottom: 3.2rem;
+        }
+      }
+
+      &__icon {
+        height: 2rem;
+        width: 2rem;
+        padding: 1.4rem;
+        border-radius: 50%;
+        background-color: var(--color-tertiary-light);
+        color: var(--color-primary);
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: 68.75em) {
+          padding: 0;
+          margin-bottom: 2rem;
+        }
+      }
+
+      &__title {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 1.6rem;
+
+        @media only screen and (max-width: 68.75em) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &__text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// TESTIMONIAL SECTION
+
+.section--testimonial {
+  padding: 9.6rem 3.2rem;
+  background-color: #fbf6f0;
+
+  @media only screen and (max-width: 68.75em) {
+    background-color: #fff;
+    padding: 6.4rem;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 6.4rem;
+
+    @media only screen and (max-width: 68.75em) {
+      grid-template-columns: 1fr;
+      row-gap: 4.4rem;
+      background-color: var(--color-tertiary-light);
+      padding: 6.4rem 3.2rem;
+    }
+
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.4rem;
+      position: relative;
+
+      @media only screen and (max-width: 68.75em) {
+        align-items: flex-start;
+        margin: 0 auto;
+        width: 60%;
+      }
+
+      @media only screen and (max-width: 37.5em) {
+        width: 100%;
+      }
+
+      &__img {
+        display: block;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 100%;
+      }
+
+      &__text {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        margin-bottom: 2.4rem;
+        text-align: center;
+
+        @media only screen and (max-width: 68.75em) {
+          text-align: left;
+          margin-bottom: 0;
+        }
+      }
+
+      .name-rating {
+        @media only screen and (max-width: 68.75em) {
+          position: absolute;
+          top: 2rem;
+          left: 8rem;
+          text-align: left;
+        }
+      }
+
+      &__client-name {
+        font-weight: bolder;
+        font-size: 1.2rem;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .star__rating {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .testimonial__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--color-primary);
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 0.4rem 0.4rem;
+      letter-spacing: 1.1px;
+      border-bottom: 1px solid currentColor;
+      transition: all 0.3s;
+    }
+    &:hover,
+    &:active {
+      color: var(--color-primary-dark);
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
